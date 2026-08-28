@@ -1,0 +1,220 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20260827212524
+Nombre de usuario: DESKTOP-JQO96R2\milag
+Usuario RunAs: DESKTOP-JQO96R2\milag
+Nombre de la configuración: 
+Máquina: DESKTOP-JQO96R2 (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 7452
+PSVersion: 5.1.26100.9168
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9168
+BuildVersion: 10.0.26100.9168
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es .\tareas\tarea01\tarea01.txt
+PS C:\Users\milag\Documents\curso-520> pwd
+
+Path
+----
+C:\Users\milag\Documents\curso-520
+
+
+PS C:\Users\milag\Documents\curso-520> cd \
+PS C:\> cd ~
+PS C:\Users\milag> cd ..
+PS C:\Users> cd c:\windows
+PS C:\windows> mkdir carpeta_prueba
+mkdir : Acceso denegado a la ruta de acceso 'carpeta_prueba'.
+En línea: 1 Carácter: 1
++ mkdir carpeta_prueba
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\carpeta_prueba:String) [New-Item], 
+UnauthorizedAccessException
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+mkdir : Acceso denegado a la ruta de acceso 'carpeta_prueba'.
+En línea: 1 Carácter: 1
++ mkdir carpeta_prueba
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\carpeta_prueba:String) [New-Item], UnauthorizedAccessExcep
+   tion
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\windows> mkdir carpeta_prueba
+mkdir : Acceso denegado a la ruta de acceso 'carpeta_prueba'.
+En línea: 1 Carácter: 1
++ mkdir carpeta_prueba
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\carpeta_prueba:String) [New-Item], 
+UnauthorizedAccessException
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+mkdir : Acceso denegado a la ruta de acceso 'carpeta_prueba'.
+En línea: 1 Carácter: 1
++ mkdir carpeta_prueba
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\carpeta_prueba:String) [New-Item], UnauthorizedAccessExcep
+   tion
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\windows> mkdir carpeta
+mkdir : Acceso denegado a la ruta de acceso 'carpeta'.
+En línea: 1 Carácter: 1
++ mkdir carpeta
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\carpeta:String) [New-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+mkdir : Acceso denegado a la ruta de acceso 'carpeta'.
+En línea: 1 Carácter: 1
++ mkdir carpeta
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\carpeta:String) [New-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\windows> mkdir tmt.prueba
+mkdir : Acceso denegado a la ruta de acceso 'tmt.prueba'.
+En línea: 1 Carácter: 1
++ mkdir tmt.prueba
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\tmt.prueba:String) [New-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+mkdir : Acceso denegado a la ruta de acceso 'tmt.prueba'.
+En línea: 1 Carácter: 1
++ mkdir tmt.prueba
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\windows\tmt.prueba:String) [New-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : CreateDirectoryUnauthorizedAccessError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\windows> cd --
+PS C:\windows> cd ..
+PS C:\> mkdir carpeta_prueba
+
+
+    Directorio: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        27/08/2026     21:28                carpeta_prueba
+
+
+PS C:\> echo "Este es un texto de prueba" > archivo.txt
+out-file : Acceso denegado a la ruta de acceso 'C:\archivo.txt'.
+En línea: 1 Carácter: 1
++ echo "Este es un texto de prueba" > archivo.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+out-file : Acceso denegado a la ruta de acceso 'C:\archivo.txt'.
+En línea: 1 Carácter: 1
++ echo "Este es un texto de prueba" > archivo.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\> cd
+PS C:\> cd ~
+PS C:\Users\milag> cd ..
+PS C:\Users> cd \carpeta_prueba
+PS C:\carpeta_prueba> echo "Este es un texto de prueba" > archivo.txt
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Este es un texto de prueba"
+PS C:\carpeta_prueba> cp archivo.txt copia_archivo.txt
+PS C:\carpeta_prueba> mv copia_archivo.txt renombrado.txt
+
+PS C:\carpeta_prueba> rm archivo.txt
+PS C:\carpeta_prueba> rm renombrado.txt
+
+PS C:\carpeta_prueba> cd ..
+PS C:\> rmdir carpeta_prueba
+PS C:\> echo "Línea A" > combined.txt
+
+out-file : Acceso denegado a la ruta de acceso 'C:\combined.txt'.
+En línea: 1 Carácter: 1
++ echo "Línea A" > combined.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+out-file : Acceso denegado a la ruta de acceso 'C:\combined.txt'.
+En línea: 1 Carácter: 1
++ echo "Línea A" > combined.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\> echo "Línea A" > combined.txt
+
+out-file : Acceso denegado a la ruta de acceso 'C:\combined.txt'.
+En línea: 1 Carácter: 1
++ echo "Línea A" > combined.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+out-file : Acceso denegado a la ruta de acceso 'C:\combined.txt'.
+En línea: 1 Carácter: 1
++ echo "Línea A" > combined.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\> Get-Content prueba\archivo.txt | Measure-Object -Line
+Get-Content : No se encuentra la ruta de acceso 'C:\prueba\archivo.txt' porque no existe.
+En línea: 1 Carácter: 1
++ Get-Content prueba\archivo.txt | Measure-Object -Line
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\prueba\archivo.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+Get-Content : No se encuentra la ruta de acceso 'C:\prueba\archivo.txt' porque no existe.
+En línea: 1 Carácter: 1
++ Get-Content prueba\archivo.txt | Measure-Object -Line
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\prueba\archivo.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+
+Lines Words Characters Property
+----- ----- ---------- --------
+    0
+
+
+PS C:\> Get-Content carpeta_pruebao.txt | Measure-Object -Line
+Get-Content : No se encuentra la ruta de acceso 'C:\carpeta_pruebao.txt' porque no existe.
+En línea: 1 Carácter: 1
++ Get-Content carpeta_pruebao.txt | Measure-Object -Line
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\carpeta_pruebao.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+Get-Content : No se encuentra la ruta de acceso 'C:\carpeta_pruebao.txt' porque no existe.
+En línea: 1 Carácter: 1
++ Get-Content carpeta_pruebao.txt | Measure-Object -Line
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\carpeta_pruebao.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+
+Lines Words Characters Property
+----- ----- ---------- --------
+    0
+
+
+PS C:\> Get-Content carpeta_prueba.txt | Sort-Object | Get-Unique
+Get-Content : No se encuentra la ruta de acceso 'C:\carpeta_prueba.txt' porque no existe.
+En línea: 1 Carácter: 1
++ Get-Content carpeta_prueba.txt | Sort-Object | Get-Unique
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\carpeta_prueba.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+Get-Content : No se encuentra la ruta de acceso 'C:\carpeta_prueba.txt' porque no existe.
+En línea: 1 Carácter: 1
++ Get-Content carpeta_prueba.txt | Sort-Object | Get-Unique
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\carpeta_prueba.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+PS C:\> stop-transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20260827213518
+**********************
