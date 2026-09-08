@@ -250,3 +250,259 @@ ggplot(data =  penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g, c
   ) +
     geom_point() +
     geom_smooth(se = FALSE)
+  
+  # 10. ¿Estos dos gráficos se verán diferentes? ¿Por qué o por qué no?
+  
+  ggplot(
+    data = penguins,
+    mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  ) +
+    geom_point() +
+    geom_smooth()
+  
+  ggplot() +
+    geom_point(
+      data = penguins,
+      mapping = aes(x = flipper_length_mm, y = body_mass_g)
+    ) +
+    geom_smooth(
+      data = penguins,
+      mapping = aes(x = flipper_length_mm, y = body_mass_g)
+    )
+  
+  #si, recrean el mismo grafico
+  
+
+# LLAMADAS GGPLOT2 --------------------------------------------------------
+
+  
+  ggplot(
+    data = penguins,
+    mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  ) +
+    geom_point()
+  
+  
+  ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + 
+    geom_point()
+  
+  
+  penguins |> 
+    ggplot(aes(x = flipper_length_mm, y = body_mass_g)) + 
+    geom_point()
+  
+  
+
+# VISUALIZACION DE DISTRIBUCIONES -----------------------------------------
+
+  
+  #una variable categorica
+  ggplot(penguins, aes(x = species)) +
+    geom_bar()
+  
+  ggplot(penguins, aes(x = fct_infreq(species))) +
+    geom_bar()
+  
+  #una variable numerica
+  ggplot(penguins, aes(x = body_mass_g)) +
+    geom_histogram(binwidth = 200)
+  
+  ggplot(penguins, aes(x = body_mass_g)) +
+    geom_histogram(binwidth = 20)
+  ggplot(penguins, aes(x = body_mass_g)) +
+    geom_histogram(binwidth = 2000)
+  
+  ggplot(penguins, aes(x = body_mass_g)) +
+    geom_density()
+  #> Warning: Removed 2 rows containing non-finite outside the scale range
+  #> (`stat_density()`).
+  
+  
+  #EJERCICIOS======================================================
+  
+  # 1. Haz un gráfico de barras de , donde asignas a la estética. ¿En qué se diferencia esta trama?
+  
+  ggplot(data = penguins, mapping = aes(x = species)) +
+    geom_bar()
+
+  #el grafico genera 3 barras, lo que se nota de particular es que no
+  #necesitamos especificar un eje y ya que geom_bar()
+  #calcula automaticamente el conteo.
+  
+  # 2. ¿En qué se diferencian las dos siguientes tramas?
+  # ¿Qué estética, o , es más útil para cambiar el color de las barras?
+  
+  ggplot(penguins, aes(x = species)) +
+    geom_bar(color = "red")
+  
+  ggplot(penguins, aes(x = species)) +
+    geom_bar(fill = "red")
+  
+  # el rpimer codigo te deja las barras grises con una linea roja alrededor
+  # el segundo codigo pinta las barras completamente de rojo
+  
+  # 3.¿Qué hace el argumento en?
+  
+  geom_histogram()
+  
+  
+  # 4. histograma
+  
+  library(tidyverse)
+  
+
+  ggplot(diamonds, aes(x = carat)) +
+    geom_histogram(binwidth = 0.1)
+  
+  # Probar con otros anchos de bin
+  ggplot(diamonds, aes(x = carat)) +
+    geom_histogram(binwidth = 0.05)
+  
+  ggplot(diamonds, aes(x = carat)) +
+    geom_histogram(binwidth = 0.5)
+  
+  ggplot(diamonds, aes(x = carat)) +
+    geom_histogram(binwidth = 1)
+
+  
+    # el ancho de bin afecta la interpretación del histograma: valores pequeños muestran detalle 
+    # pero pueden ser ruidosos, mientras que valores grandes simplifican y resaltan tendencias generales.
+  
+  
+
+# VISUALIZACION DE RELACIONES ---------------------------------------------
+
+
+  # Una variable numerica y una categorica
+  
+  ggplot(penguins, aes(x = species, y = body_mass_g)) +
+    geom_boxplot()
+  
+  ggplot(penguins, aes(x = body_mass_g, color = species)) +
+    geom_density(linewidth = 0.75)
+  
+  ggplot(penguins, aes(x = body_mass_g, color = species, fill = species)) +
+    geom_density(alpha = 0.5)
+  
+  
+  # dos variables categoricas
+  
+  ggplot(penguins, aes(x = island, fill = species)) +
+    geom_bar()
+  
+  ggplot(penguins, aes(x = island, fill = species)) +
+    geom_bar(position = "fill")
+  
+  ggplot(penguins, aes(x = island, fill = species)) +
+    geom_bar(position = "fill") +
+    labs(y = "proportion")
+  
+  ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+    geom_point()
+  
+  
+  # tres o mas variables
+  
+  ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+    geom_point(aes(color = species, shape = island))
+  
+  
+  ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+    geom_point(aes(color = species, shape = species)) +
+    facet_wrap(~island)
+  
+  # ejercicios 
+  
+  
+  # 1.  ¿Qué variables en son categóricas? ¿Qué variables son numéricas?
+  # (Pista: Escribe para leer la documentación del conjunto de datos.) 
+  # ¿Cómo puedes ver esta información cuando corres?
+  
+  library(ggplot2)
+  
+  # Ver las primeras filas
+  head(mpg)
+  
+  # Ver estructura completa
+  glimpse(mpg)
+  
+  # En el dataset mpg, las variables categóricas son manufacturer, model, trans, drv, fl y class. 
+  # Las variables numéricas son displ, year, cyl, cty y hwy. Esto se puede comprobar con
+  # la función glimpse(mpg), que muestra el tipo de cada columna.
+  
+  
+  # 2
+  
+  library(ggplot2)
+  
+  # Scatterplot de displ vs hwy
+  ggplot(mpg, aes(x = displ, y = hwy)) +
+    geom_point()
+  
+  # El gráfico de dispersión de displ vs hwy muestra una relación inversa:
+  # los autos con mayor cilindrada tienen menor rendimiento en carretera. 
+  # Esto sugiere que motores más grandes son menos eficientes en consumo de combustible.
+  
+  # 3. 
+  
+  library(ggplot2)
+  
+  # Usando color para diferenciar por clase de auto
+  ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+    geom_point()
+  
+  # Otra opción: usar forma de los puntos según tipo de tracción
+  ggplot(mpg, aes(x = displ, y = hwy, shape = drv)) +
+    geom_point()
+  
+  
+  # Al agregar la variable class como color en el gráfico de dispersión,
+  # se observa que los autos compactos y subcompactos tienden a tener menor cilindrada y 
+  # mayor rendimiento en carretera, mientras que los SUV y camionetas tienen mayor cilindrada y 
+  # menor rendimiento. Esto enriquece la interpretación del gráfico mostrando diferencias entre categorías de vehículos.
+  
+  
+  # 4. ¿Qué ocurre si asignas la misma variable a varias estéticas?
+  
+  
+  library(ggplot2)
+  
+  # Facet por clase de auto
+  ggplot(mpg, aes(x = displ, y = hwy)) +
+    geom_point() +
+    facet_wrap(~ class)
+  
+  # Otra opción: facet por tipo de tracción
+  ggplot(mpg, aes(x = displ, y = hwy)) +
+    geom_point() +
+    facet_wrap(~ drv)
+  
+  # Al aplicar facet_wrap(~ class) el gráfico se divide en paneles por categoría de auto.
+  # Esto facilita comparar cómo varía la relación entre cilindrada y rendimiento en carretera 
+  # dentro de cada clase. Se observa que los autos compactos y subcompactos tienen menor cilindrada y
+  # mayor eficiencia, mientras que los SUV y camionetas muestran mayor cilindrada y menor rendimiento.
+  
+  
+  # 5.
+  
+  ggplot(
+    data = penguins,
+    mapping = aes(
+      x = bill_length_mm, y = bill_depth_mm, 
+      color = species, shape = species
+    )
+  ) +
+    geom_point() +
+    labs(color = "Species")
+  
+  
+  ggplot(penguins, aes(x = island, fill = species)) +
+    geom_bar(position = "fill")
+  ggplot(penguins, aes(x = species, fill = island)) +
+    geom_bar(position = "fill")
+  
+  
+  ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+    geom_point()
+  ggsave(filename = "penguin-plot.png")
+  
