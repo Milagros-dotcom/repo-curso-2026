@@ -1,0 +1,100 @@
+# A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm
+   <fct>   <fct>              <dbl>         <dbl>             <int>
+ 1 Adelie  Torgersen           39.1          18.7               181
+ 2 Adelie  Torgersen           39.5          17.4               186
+ 3 Adelie  Torgersen           40.3          18                 195
+ 4 Adelie  Torgersen           NA            NA                  NA
+ 5 Adelie  Torgersen           36.7          19.3               193
+ 6 Adelie  Torgersen           39.3          20.6               190
+ 7 Adelie  Torgersen           38.9          17.8               181
+ 8 Adelie  Torgersen           39.2          19.6               195
+ 9 Adelie  Torgersen           34.1          18.1               193
+10 Adelie  Torgersen           42            20.2               190
+# ℹ 334 more rows
+# ℹ 3 more variables: body_mass_g <int>, sex <fct>, year <int>
+# ℹ Use `print(n = ...)` to see more rows
+Rows: 344
+Columns: 8
+$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Adelie,…
+$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen, Tor…
+$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 3…
+$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 1…
+$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190…
+$ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3…
+$ sex               <fct> male, female, female, NA, female, male, female,…
+$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007,…
+# A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex     year
+   <fct>   <fct>              <dbl>         <dbl>             <int>       <int> <fct>  <int>
+ 1 Adelie  Torgersen           39.1          18.7               181        3750 male    2007
+ 2 Adelie  Torgersen           39.5          17.4               186        3800 female  2007
+ 3 Adelie  Torgersen           40.3          18                 195        3250 female  2007
+ 4 Adelie  Torgersen           NA            NA                  NA          NA <NA>    2007
+ 5 Adelie  Torgersen           36.7          19.3               193        3450 female  2007
+ 6 Adelie  Torgersen           39.3          20.6               190        3650 male    2007
+ 7 Adelie  Torgersen           38.9          17.8               181        3625 female  2007
+ 8 Adelie  Torgersen           39.2          19.6               195        4675 male    2007
+ 9 Adelie  Torgersen           34.1          18.1               193        3475 <NA>    2007
+10 Adelie  Torgersen           42            20.2               190        4250 <NA>    2007
+# ℹ 334 more rows
+# ℹ Use `print(n = ...)` to see more rows
+geom_smooth: na.rm = FALSE, orientation = NA, se = TRUE
+stat_smooth: na.rm = FALSE, orientation = NA, se = TRUE, method = lm
+position_identity 
+geom_smooth: na.rm = FALSE, orientation = NA, se = TRUE
+stat_smooth: na.rm = FALSE, orientation = NA, se = TRUE, method = lm
+position_identity 
+geom_smooth: na.rm = TRUE, orientation = NA, se = TRUE
+stat_smooth: na.rm = TRUE, orientation = NA, se = TRUE, method = lm
+position_identity 
+geom_smooth: na.rm = TRUE, orientation = NA, se = TRUE
+stat_smooth: na.rm = TRUE, orientation = NA, se = TRUE, method = lm
+position_identity 
+geom_smooth: na.rm = FALSE, orientation = NA, se = TRUE
+stat_smooth: na.rm = FALSE, orientation = NA, se = TRUE, method = lm
+position_identity 
+geom_smooth: na.rm = FALSE, orientation = NA, se = TRUE
+stat_smooth: na.rm = FALSE, orientation = NA, se = TRUE, method = lm
+position_identity 
+# A tibble: 344 × 8
+   species island  bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex    year
+   <fct>   <fct>            <dbl>         <dbl>             <int>       <int> <fct> <int>
+ 1 Adelie  Torger…           39.1          18.7               181        3750 male   2007
+ 2 Adelie  Torger…           39.5          17.4               186        3800 fema…  2007
+ 3 Adelie  Torger…           40.3          18                 195        3250 fema…  2007
+ 4 Adelie  Torger…           NA            NA                  NA          NA <NA>   2007
+ 5 Adelie  Torger…           36.7          19.3               193        3450 fema…  2007
+ 6 Adelie  Torger…           39.3          20.6               190        3650 male   2007
+ 7 Adelie  Torger…           38.9          17.8               181        3625 fema…  2007
+ 8 Adelie  Torger…           39.2          19.6               195        4675 male   2007
+ 9 Adelie  Torger…           34.1          18.1               193        3475 <NA>   2007
+10 Adelie  Torger…           42            20.2               190        4250 <NA>   2007
+# ℹ 334 more rows
+# ℹ Use `print(n = ...)` to see more rows
+geom_bar: na.rm = FALSE, orientation = NA, lineend = butt, linejoin = mitre
+stat_bin: na.rm = FALSE, binwidth = NULL, bins = NULL, orientation = NA
+position_stack 
+# A tibble: 6 × 11
+  manufacturer model displ  year   cyl trans     drv     cty   hwy
+  <chr>        <chr> <dbl> <int> <int> <chr>     <chr> <int> <int>
+1 audi         a4      1.8  1999     4 auto(l5)  f        18    29
+2 audi         a4      1.8  1999     4 manual(m… f        21    29
+3 audi         a4      2    2008     4 manual(m… f        20    31
+4 audi         a4      2    2008     4 auto(av)  f        21    30
+5 audi         a4      2.8  1999     6 auto(l5)  f        16    26
+6 audi         a4      2.8  1999     6 manual(m… f        18    26
+# ℹ 2 more variables: fl <chr>, class <chr>
+Rows: 234
+Columns: 11
+$ manufacturer <chr> "audi", "audi", "audi", "audi", "audi", "au…
+$ model        <chr> "a4", "a4", "a4", "a4", "a4", "a4", "a4", "…
+$ displ        <dbl> 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8…
+$ year         <int> 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1…
+$ cyl          <int> 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6…
+$ trans        <chr> "auto(l5)", "manual(m5)", "manual(m6)", "au…
+$ drv          <chr> "f", "f", "f", "f", "f", "f", "f", "4", "4"…
+$ cty          <int> 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19,…
+$ hwy          <int> 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27,…
+$ fl           <chr> "p", "p", "p", "p", "p", "p", "p", "p", "p"…
+$ class        <chr> "compact", "compact", "compact", "compact",…
