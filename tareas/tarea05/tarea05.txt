@@ -41,7 +41,13 @@ $ article_text <chr> "Brought to you by Alex Panas, global leader of industries,
  $ link        : chr  "/~/media/mckinsey/email/genz/2025/10/2025-10-07b.html" "/~/media/mckinsey/email/genz/2025/09/2025-09-23b.html" "/~/media/mckinsey/email/genz/2025/09/2025-09-09b.html" "/~/media/mckinsey/email/genz/2025/08/2025-08-12b.html" ...
  $ description : chr  "In the United States, fewer teenagers are getting their driver’s licenses today than in decades past. But they’"| __truncated__ "Is it ever too soon to shop for the holidays? While other generations tend to say no—and start their holiday sh"| __truncated__ "In the United States, college football season has arrived and Gen Zers are back on campus to rally behind their"| __truncated__ "Companies are pouring money into all kinds of AI-based tools—including gen AI, agentic AI, and automation—and i"| __truncated__ ...
  $ article_text: chr  "Brought to you by Alex Panas, global leader of industries, & Axel Karlsson, global leader of functional practic"| __truncated__ "Brought to you by Alex Panas, global leader of industries, & Axel Karlsson, global leader of functional practic"| __truncated__ "Brought to you by Alex Panas, global leader of industries, & Axel Karlsson, global leader of functional practic"| __truncated__ "Brought to you by Alex Panas, global leader of industries, & Axel Karlsson, global leader of functional practic"| __truncated__ ...
-indexing DATA-T9-mckinsey-mind-the-gap-articles-20251020.csv [================] 2.15GB/s, eta:  0s                                                                                                  indexing DATA-T9-mckinsey-mind-the-gap-articles-20251020.csv [==============] 128.66MB/s, eta:  0s                                                                                                  Rows: 146
+
+indexing DATA-T9-mckinsey-mind-the-gap-articles-20251020.csv [================] 2.15GB/s, eta:  0s
+                                                                                                  
+
+indexing DATA-T9-mckinsey-mind-the-gap-articles-20251020.csv [==============] 128.66MB/s, eta:  0s
+                                                                                                  
+Rows: 146
 Columns: 8
 $ doc_id       <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
 $ title        <chr> "Will Gen Z give up the driver’s seat?", "What do Gen Zers want for the hol…
